@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="images/x-icon" href="Calc.png">
+  <title>CustCalc</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id = "mainbg" class = "mainbg">
+  <div class = "header"><h1>CustCalc</h1></div>
+  <center>
+    <div class = "CalcDiv">
+        <div class = "textDiv"><p id = "maincalc">0</p></div>
+        <span>
+            <button class = "degbutton" id = "degb" onclick="degb()">deg</button>
+            <button class = "radbutton" id = "radb" onclick="rad()">rad</button>
+            <button class = "button" id = "button" onclick="bgchange()">BG</button>
+            <button class = "button" id = "button1" onclick="col1()">Col1</button>
+            <button class = "button" id = "button2" onclick="col2()">Col2</button>
+        </span><br>
+        <span>
+            <button class = "button"  id = "button3" onclick="one()">1</button>
+            <button class = "button"  id = "button4" onclick="two()">2</button>
+            <button class = "button"  id = "button5" onclick="three()">3</button>
+            <button class = "button"  id = "button6" onclick="plus()">+</button>
+            <button class = "button"  id = "button7" onclick="times()">x</button>
+        </span><br>
+        <span>
+            <button class = "button"  id = "button8" onclick="four()">4</button>
+            <button class = "button"  id = "button9" onclick="five()">5</button>
+            <button class = "button"  id = "button10" onclick="six()">6</button>
+            <button class = "button"  id = "button11" onclick="minus()">-</button>
+            <button class = "button"  id = "button12" onclick="divide()">÷</button>
+        </span><br>
+        <span>
+            <button class = "button" id = "button13" onclick="seven()">7</button>
+            <button class = "button" id = "button14" onclick="eight()">8</button>
+            <button class = "button" id = "button15"  onclick="nine()">9</button>
+            <button class = "button" id = "button16"  onclick="clears()">C</button>
+            <button class = "button" id = "button17"  onclick="equals()">=</button>
+        </span><br>
+        <span>
+            <button class = "button" id = "button18" onclick="zero()">0</button>
+            <button class = "button" id = "button19" onclick="decimal()">.</button>
+            <button class = "button" id = "button20"  onclick="expon()">^</button>
+            <button class = "button" id = "button21"  onclick="pidown()">π</button>
+            <button class = "sqrtbutton" id = "sqrt" onclick="sqrtx()">√</button>
+        </span><br>
+        <span>
+            <button class = "sinbutton" id ="sine" onclick="sine()">sin</button>
+            <button class = "cosbutton" id="cosine" onclick="cosine()">cos</button>
+            <button class = "tanbutton" id="tangent" onclick="tangent()">tan</button>
+            <button class = "factorialbutton" id="fact" onclick="factorial()">!</button>
+            <button class = "negbutton" id = "neg" onclick="negat()">(-)</button>
+        </span><br>
+        
+        
+    </div>
+  </center>
+  <script src="script.js"></script>
+</body>
+
+</html>
