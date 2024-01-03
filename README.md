@@ -1,5 +1,17 @@
 # CustCalc
 
+## Specifications
+
+Base files:
+
+Calc.png, CustomCalculator.html, WebBack.png, script.js, style.css
+
+DO NOT DELETE THESE FILES. They are required to run the program
+
+Total size: 867kb
+
+Version: 1.0.1
+
 ## Description
 
 A customizable calculator! This calculator web based application has customizable feautres, such as background pictures and customized colors! This calculator comes with basic features, such as basic numbers, operations, trig functions and basic exponents. 
@@ -24,7 +36,7 @@ All of these should save automatically (and locally)!
 
 ### Using your calculator
 
-First thing you will see is a bung of buttons. All buttons will be explained in detail:
+First thing you will see is a bunch of buttons. All buttons will be explained in detail:
 
 Deg: Switches to using degrees (on by default)
 
@@ -50,3 +62,18 @@ Clear (C): Clears everything (not including memory or degree setting)
 
 Pi (π): Inputs pi into the screen
 
+Factorial (!): Under development, doesn't work for now
+
+Tan, Sin, Cos: Tangent, Sine, Cosine respectively. You can only have 1 active at once
+
+## Final words
+
+Thank you if you do end up downloading this! 
+
+Credits: Images from google, Made by Imeanbusiness (me), idea from Maíra
+
+## Patch notes
+
+Version 1.0: Added files
+
+Version 1.0.1 (current version): Added local storage saves
