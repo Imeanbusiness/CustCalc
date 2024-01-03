@@ -30,6 +30,23 @@ Deg: Switches to using degrees (on by default)
 
 Rad: Switches to using radiants
 
-Numbers (1-9): Adds a number to screen
+Numbers (0-9): Adds a number to screen. Limit of 40 characters at once
 
+Subtract (-): Subtracts the first value from the second
+
+Multiply (x): Multiplies the first value by the second
+
+Divide (÷): Divides first value by the second
+
+Add (+): Adds the first value from the second
+
+Exponents (^): Uses the second value as the exponent and the first as the base
+
+Square Root (√): Squares the value of any
+
+Decimal point (.): Adds a decimal point
+
+Clear (C): Clears everything (not including memory or degree setting)
+
+Pi (π): Inputs pi into the screen
 
