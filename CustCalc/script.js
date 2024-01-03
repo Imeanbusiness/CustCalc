@@ -79,7 +79,6 @@ if (saved == "nope!") {
     document.getElementById("button19").style.color = color;
     document.getElementById("button20").style.color = color;
     document.getElementById("button21").style.color = color;
-    document.getElementById("maincalc").innerHTML = "Yay!";
 }
 
 
