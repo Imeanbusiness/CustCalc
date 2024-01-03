@@ -16,4 +16,4 @@ A customizable calculator! This calculator web based application has customizabl
 
 ### Customizing your calculator
 
-In order 
+In order to customize your calculator background, please download an image
