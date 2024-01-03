@@ -18,6 +18,72 @@ var sqrt = false;
 var fact = false;
 const factorialSeq = [1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368000, 20922789888000, 355687428096000, 6402373705728000, 121645100408832000, 2432902008176640000, 51090942171709440000, 1124000727777607680000, 25852016738884976640000, 620448401733239439360000, 15511210043330985984000000, 403291461126605635584000000, 10888869450418352160768000000, 304888344611713860501504000000, 8841761993739701954543616000000, 265252859812191058636308480000000, 8222838654177922817725562880000000, 263130836933693530167218012160000000, 8683317618811886495518194401280000000, 295232799039604140847618609643520000000, 10333147966386144929666651337523200000000, 371993326789901217467999448150835200000000];
 const degrees = Math.PI/180;
+
+try {
+    saved = localStorage.getItem("saved")
+} catch (error) {
+    saved = "nope!";
+}
+
+if (saved == "nope!") {
+    localStorage.setItem("bgfile","WebBack.png")
+    localStorage.setItem("color1","#ffffff")
+    localStorage.setItem("color2","#000000")
+    localStorage.setItem("saved","yeah!")
+} else {
+    file = localStorage.getItem("bgfile");
+    document.getElementById("mainbg").style.backgroundImage = "url(\""+file+"\")";
+    color = localStorage.getItem("color1");
+    document.getElementById("button").style.backgroundColor = color;
+    document.getElementById("button1").style.backgroundColor = color;
+    document.getElementById("button2").style.backgroundColor = color;
+    document.getElementById("button3").style.backgroundColor = color;
+    document.getElementById("button4").style.backgroundColor = color;
+    document.getElementById("button5").style.backgroundColor = color;
+    document.getElementById("button6").style.backgroundColor = color;
+    document.getElementById("button7").style.backgroundColor = color;
+    document.getElementById("button8").style.backgroundColor = color;
+    document.getElementById("button9").style.backgroundColor = color;
+    document.getElementById("button10").style.backgroundColor = color;
+    document.getElementById("button11").style.backgroundColor = color;
+    document.getElementById("button12").style.backgroundColor = color;
+    document.getElementById("button13").style.backgroundColor = color;
+    document.getElementById("button14").style.backgroundColor = color;
+    document.getElementById("button15").style.backgroundColor = color;
+    document.getElementById("button16").style.backgroundColor = color;
+    document.getElementById("button17").style.backgroundColor = color;
+    document.getElementById("button18").style.backgroundColor = color;
+    document.getElementById("button19").style.backgroundColor = color;
+    document.getElementById("button20").style.backgroundColor = color;
+    document.getElementById("button21").style.backgroundColor = color;
+    color = localStorage.getItem("color2");
+    document.getElementById("button").style.color = color;
+    document.getElementById("button1").style.color = color;
+    document.getElementById("button2").style.color = color;
+    document.getElementById("button3").style.color = color;
+    document.getElementById("button4").style.color = color;
+    document.getElementById("button5").style.color = color;
+    document.getElementById("button6").style.color = color;
+    document.getElementById("button7").style.color = color;
+    document.getElementById("button8").style.color = color;
+    document.getElementById("button9").style.color = color;
+    document.getElementById("button10").style.color = color;
+    document.getElementById("button11").style.color = color;
+    document.getElementById("button12").style.color = color;
+    document.getElementById("button13").style.color = color;
+    document.getElementById("button14").style.color = color;
+    document.getElementById("button15").style.color = color;
+    document.getElementById("button16").style.color = color;
+    document.getElementById("button17").style.color = color;
+    document.getElementById("button18").style.color = color;
+    document.getElementById("button19").style.color = color;
+    document.getElementById("button20").style.color = color;
+    document.getElementById("button21").style.color = color;
+    document.getElementById("maincalc").innerHTML = "Yay!";
+}
+
+
+
 //equals
 function execute() {
     try {
@@ -626,11 +692,13 @@ function expon() {
 var bgid = "WebBack.png";
 function bgchange() {
     file = prompt("Enter file name:");
+    localStorage.setItem("bgfile",file)
     document.getElementById("mainbg").style.backgroundImage = "url(\""+file+"\")";
 }
 
 function col1() {
     color = prompt("Enter hex code:");
+    localStorage.setItem("color1",color)
     document.getElementById("button").style.backgroundColor = color;
     document.getElementById("button1").style.backgroundColor = color;
     document.getElementById("button2").style.backgroundColor = color;
@@ -657,6 +725,7 @@ function col1() {
 
 function col2() {
     color = prompt("Enter hex code:");
+    localStorage.setItem("color2",color)
     document.getElementById("button").style.color = color;
     document.getElementById("button1").style.color = color;
     document.getElementById("button2").style.color = color;
