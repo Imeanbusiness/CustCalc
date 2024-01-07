@@ -18,7 +18,7 @@ A customizable calculator! This calculator web based application has customizabl
 
 ## Download instructions
 
-1: Click [here]([https://github.com/Imeanbusiness/CustCalc/archive/refs/tags/Beta.zip](https://github.com/Imeanbusiness/CustCalc/archive/refs/tags/CustCalc.zip) to download (zipped) files
+1: Click [here](https://github.com/Imeanbusiness/CustCalc/archive/refs/tags/CustCalc.zip) to download (zipped) files
 
 2: Open and right click, then click "extract all"
 
