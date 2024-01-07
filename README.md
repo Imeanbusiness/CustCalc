@@ -4,7 +4,7 @@
 
 Base files:
 
-Calc.png, CustomCalculator.html, WebBack.png, script.js, style.css
+Calc.png, CustomCalculator.html, Manual.html, WebBack.png, script.js, style.css
 
 DO NOT DELETE THESE FILES. They are required to run the program
 
