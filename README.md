@@ -8,7 +8,7 @@ Calc.png, CustomCalculator.html, WebBack.png, script.js, style.css
 
 DO NOT DELETE THESE FILES. They are required to run the program
 
-Total size: 867kb
+Total size: 885 kb
 
 Version: 1.1.0
 
@@ -18,7 +18,7 @@ A customizable calculator! This calculator web based application has customizabl
 
 ## Download instructions
 
-1: Click [here](https://github.com/Imeanbusiness/CustCalc/archive/refs/tags/Beta.zip) to download (zipped) files
+1: Click [here]([https://github.com/Imeanbusiness/CustCalc/archive/refs/tags/Beta.zip](https://github.com/Imeanbusiness/CustCalc/archive/refs/tags/CustCalc.zip)) to download (zipped) files
 
 2: Open and right click, then click "extract all"
 
