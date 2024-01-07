@@ -10,7 +10,7 @@ DO NOT DELETE THESE FILES. They are required to run the program
 
 Total size: 867kb
 
-Version: 1.0.1
+Version: 1.1.0
 
 ## Description
 
@@ -64,7 +64,15 @@ Pi (π): Inputs pi into the screen
 
 Factorial (!): Under development, doesn't work for now
 
-Tan, Sin, Cos: Tangent, Sine, Cosine respectively. You can only have 1 active at once
+tan, sin, cos: Tangent, Sine, Cosine respectively. You can only have 1 active at once
+
+atan, asin, acos: Arctangent, Arcsine, Arccosine respectively. You can only have 1 active at once, like with the original 3
+
+del: Deletes the last character
+
+Reset: Resets the customized items
+
+Help: Opens the manual
 
 ## Final words
 
@@ -76,4 +84,6 @@ Credits: Images from google, Made by Imeanbusiness (me), idea from Maíra
 
 Version 1.0: Added files
 
-Version 1.0.1 (current version): Added local storage saves
+Version 1.0.1: Added local storage saves
+
+Version 1.1.0: Added new functions, fixed trig functions bugs, added help manual, changed font.
