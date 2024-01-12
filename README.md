@@ -8,9 +8,9 @@ Calc.png, CustomCalculator.html, Manual.html, WebBack.png, script.js, style.css
 
 DO NOT DELETE THESE FILES. They are required to run the program
 
-Total size: 885 kb
+Total size: 894 kb
 
-Version: 1.1.0
+Version: 1.2.0
 
 ## Description
 
