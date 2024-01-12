@@ -32,6 +32,12 @@ In order to customize your calculator background, please download an image. Afte
 
 To change your colors, there are 2 buttons. Col1 button changes the background of your buttons and Col2 will change the text color. To change their colors, click on them and enter in a hex code of your choice
 
+To change the font, click the font button, and enter in the font you want to change to.
+
+Default font: Rubik
+
+Available fonts: Courier, Times New Roman, Georgia, Calibri, Verdana, Arial. (There may be some undiscovered fonts)
+
 All of these should save automatically (and locally)!
 
 ### Using your calculator
@@ -73,6 +79,18 @@ del: Deletes the last character
 Reset: Resets the customized items
 
 Help: Opens the manual
+
+Font: Change the font
+
+X+: Adds your value to the X memory value
+
+Y+: Adds your value to the Y memory value
+
+X: Displays X value
+
+Y: Displays Y value
+
+GitHB: Opens CustCalc Github
 
 ## Final words
 
