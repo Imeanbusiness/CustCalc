@@ -11,12 +11,17 @@ html {
     padding: 20px;
     margin: 0;
 }
+a 
 .calcDiv {
     align-items: center;
     justify-content: center;
     width: 100px;
     padding: 0;
     margin: 10em;
+
+}
+.ButtonDiv {
+    width: 100%;
 
 }
 .mainbg {
@@ -29,6 +34,18 @@ button {
 }
 .button {
     background-color: #FFFFFF;
+    color: #000000;
+    padding: 10px;
+    height: 40px;
+    width: 60px;
+    align-items: center;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    margin:10px;
+}
+.delbutton {
+    background-color: #00008B;
     color: #000000;
     padding: 10px;
     height: 40px;
@@ -66,7 +83,7 @@ button {
 .textDiv {
     background-color: #000000;
     color: white;
-    width: 460px;
+    width: 544px;
     padding: 10px;
     border-radius: 10px;
     height: 30px;

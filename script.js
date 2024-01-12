@@ -19,18 +19,60 @@ var atan = false;
 var neg = false;
 var sqrt = false;
 var fact = false;
-
+var xval = 0;
+var yval = 0;
 const factorialSeq = [1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368000, 20922789888000, 355687428096000, 6402373705728000, 121645100408832000, 2432902008176640000, 51090942171709440000, 1124000727777607680000, 25852016738884976640000, 620448401733239439360000, 15511210043330985984000000, 403291461126605635584000000, 10888869450418352160768000000, 304888344611713860501504000000, 8841761993739701954543616000000, 265252859812191058636308480000000, 8222838654177922817725562880000000, 263130836933693530167218012160000000, 8683317618811886495518194401280000000, 295232799039604140847618609643520000000, 10333147966386144929666651337523200000000, 371993326789901217467999448150835200000000];
 const degrees = Math.PI/180;
 const degree2 = 180/Math.PI;
+var FontChoice = "Rubik";
 //clear
 try {
-    saved = localStorage.getItem("saved")
+    saved = localStorage.getItem("saved");
 } catch (error) {
     saved = "nope!";
 }
+
+try {
+    FontChoice = localStorage.getItem("Font")
+    document.getElementById("mainbg").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("button").style.fontFamily = "\""+FontChoice+"\"";
+    for (let i = 1; i < 29; i++) {
+        lol = "button"+i.toString()
+        
+        document.getElementById(lol).style.fontFamily = "\""+FontChoice+"\"";
+    }
+    document.getElementById("degb").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("radb").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("asin").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("sqrt").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("acos").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("sine").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("cosine").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("tangent").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("fact").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("neg").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("atan").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("cbutton").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("dbutton").style.fontFamily = "\""+FontChoice+"\"";
+    var FontLength = document.getElementById("ButtonDiv");
+    var LengthItem = Number(FontLength.offsetWidth);
+    var OtherLength = LengthItem-52;
+    localStorage.setItem("Font",FontChoice)
+    document.getElementById("textDiv").style.width = FontLength.toString()+"px";
+} catch (error) {
+    localStorage.setItem("Font","Rubik")
+}
+
+try {
+    xval = Number(localStorage.getItem("xval"));
+    yval = Number(localStorage.getItem("yval"));
+} catch (error) {
+    localStorage.setItem("xval",0)
+    localStorage.setItem("yval",0)
+}
 //update
 //debug
+//font
 if (saved == "nope!") {
     localStorage.setItem("bgfile","WebBack.png")
     localStorage.setItem("color1","#ffffff")
@@ -65,6 +107,11 @@ document.getElementById("button21").style.backgroundColor = color;
 document.getElementById("button22").style.backgroundColor = color;
 document.getElementById("button23").style.backgroundColor = color;
 document.getElementById("button24").style.backgroundColor = color;
+document.getElementById("button25").style.backgroundColor = color;
+document.getElementById("button26").style.backgroundColor = color;
+document.getElementById("button27").style.backgroundColor = color;
+document.getElementById("button28").style.backgroundColor = color;
+
 color = localStorage.getItem("color2");
 document.getElementById("button").style.color = color;
 document.getElementById("button1").style.color = color;
@@ -91,11 +138,114 @@ document.getElementById("button21").style.color = color;
 document.getElementById("button22").style.color = color;
 document.getElementById("button23").style.color = color;
 document.getElementById("button24").style.color = color;
+document.getElementById("button25").style.color = color;
+document.getElementById("button26").style.color = color;
+document.getElementById("button27").style.color = color;
+document.getElementById("button28").style.color = color;
+
 
 //debug
+//font
+//variable setting
+
+function xplus() {
+    testval = String(xval);
+    
+
+    
+    if (testval.length <= 50) {
+        if (var1Bool == false) {
+            executeOne()
+            xval += Number(absvar1);
+        } else if (var3Bool == false) {
+            executeAlso()
+            xval += Number(absvar3);
+        }
+        localStorage.setItem("xval",xval);
+   
+    }
+
+}
+//acos
+//reset
+function yplus() {
+    testval = String(yval);
+    
+    
+    if (testval.length <= 50) {
+        if (var1Bool == false) {
+            executeOne()
+            yval += Number(absvar1);
+        } else if (var3Bool == false) {
+            executeAlso()
+            yval += Number(absvar3);
+        }
+        localStorage.setItem("yval",yval);
+    }
+
+}
+
+function xDisp() {
+    if (var1Bool == false) {
+        var1 = xval;
+    } else if (var2Bool == false) {
+        var3 = xval;
+        var2Bool = true
+    } else {
+        var3 = xval;
+
+    }
+    update()
+}
+
+function yDisp() {
+    if (var1Bool == false) {
+        var1 = yval;
+    } else if (var2Bool == false) {
+        var3 = yval;
+        var2Bool = true
+    } else {
+        var3 = yval;
+
+    }
+    update()
+}
+//execute
+
 
 //update
 //equals
+
+function FontChange() {
+    FontChoice = prompt("Please enter the font you would like to use. You can find the available",FontChoice);
+    document.getElementById("mainbg").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("button").style.fontFamily = "\""+FontChoice+"\"";
+    for (let i = 1; i < 29; i++) {
+        lol = "button"+i.toString()
+        
+        document.getElementById(lol).style.fontFamily = "\""+FontChoice+"\"";
+    }
+    document.getElementById("degb").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("radb").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("asin").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("sqrt").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("acos").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("sine").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("cosine").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("tangent").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("fact").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("neg").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("atan").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("cbutton").style.fontFamily = "\""+FontChoice+"\"";
+    document.getElementById("dbutton").style.fontFamily = "\""+FontChoice+"\"";
+    var FontLength = document.getElementById("ButtonDiv");
+    var LengthItem = Number(FontLength.offsetWidth);
+    var OtherLength = LengthItem-52;
+    localStorage.setItem("Font",FontChoice)
+    document.getElementById("textDiv").style.width = FontLength.toString()+"px";
+}
+
+
 
 function Reset() {
     if (confirm("Are you sure you want to reset your customizations?")) {
@@ -103,6 +253,10 @@ function Reset() {
         localStorage.setItem("color1","#ffffff")
         localStorage.setItem("color2","#000000")
         localStorage.setItem("saved","yeah!")
+        localStorage.setItem("xval",0);
+        localStorage.setItem("yval",0);
+        xval = 0
+        yval = 0
         file = localStorage.getItem("bgfile");
         document.getElementById("mainbg").style.backgroundImage = "url(\""+file+"\")";
         color = localStorage.getItem("color1");
@@ -131,6 +285,10 @@ function Reset() {
         document.getElementById("button22").style.backgroundColor = color;
         document.getElementById("button23").style.backgroundColor = color;
         document.getElementById("button24").style.backgroundColor = color;
+        document.getElementById("button25").style.backgroundColor = color;
+        document.getElementById("button26").style.backgroundColor = color;
+        document.getElementById("button27").style.backgroundColor = color;
+        document.getElementById("button28").style.backgroundColor = color;
         color = localStorage.getItem("color2");
         document.getElementById("button").style.color = color;
         document.getElementById("button1").style.color = color;
@@ -157,6 +315,10 @@ function Reset() {
         document.getElementById("button22").style.color = color;
         document.getElementById("button23").style.color = color;
         document.getElementById("button24").style.color = color;
+        document.getElementById("button25").style.color = color;
+        document.getElementById("button26").style.color = color;
+        document.getElementById("button27").style.color = color;
+        document.getElementById("button28").style.color = color;
         clears()
     }
 }
@@ -240,6 +402,182 @@ function execute() {
     }
     update()
     var1Bool = true;
+    sin = false;
+    cos = false;
+    tan = false;
+    asin = false;
+    acos = false;
+    atan = false;
+    neg = false;
+    sqrt = false;
+    fact = false;
+    document.getElementById("sine").style.backgroundColor = "#ff0000";
+    document.getElementById("cosine").style.backgroundColor = "#ff0000";
+    document.getElementById("tangent").style.backgroundColor = "#ff0000";
+    document.getElementById("neg").style.backgroundColor = "#ff0000";
+    document.getElementById("sqrt").style.backgroundColor = "#ff0000";
+    document.getElementById("fact").style.backgroundColor = "#ff0000";
+}
+
+
+function executeOne() {
+
+    try {
+        absvar1 = Number(var1);
+        if (deg == true) {
+            if (sin == true) {
+                
+                absvar1 = Math.sin(absvar1 * degrees);
+            }
+            if (cos == true) {
+                
+                absvar1 = Math.cos(absvar1 * degrees);
+            }
+            if (tan == true) {
+                
+                absvar1 = Math.tan(absvar1 * degrees);
+            }
+            if (asin == true) {
+                
+                absvar1 = Math.asin(absvar1) * degree2;
+            }
+            if (acos == true) {
+                
+                absvar1 = Math.acos(absvar1) * degree2;
+            }
+            if (atan == true) {
+                
+                absvar1 = Math.atan(absvar1) * degree2;
+            }
+        } else {
+            if (sin == true) {
+                absvar1 = Math.sin(absvar1);
+            }
+            if (cos == true) {
+                absvar1 = Math.cos(absvar1);
+            }
+            if (tan == true) {
+                absvar1 = Math.tan(absvar1);
+            }
+            if (asin == true) {
+                absvar1 = Math.asin(absvar1);
+            }
+            if (acos == true) {
+                absvar1 = Math.acos(absvar1);
+            }
+            if (atan == true) {
+                absvar1 = Math.atan(absvar1);
+            }
+        }
+
+        if (sqrt == true) {
+            absvar1 = Math.sqrt(absvar1)
+
+        }
+
+        if (fact == true) {
+            FactVar = absvar1-1
+            try {
+                absvar1 = factorialSeq[Factvar];
+            } catch (error) {
+                alert("ERROR Please retry")
+                clears()
+            }
+        }
+    } catch (error) {
+        alert("ERROR. Please retry")
+        clears()
+    }
+    update()
+
+    sin = false;
+    cos = false;
+    tan = false;
+    asin = false;
+    acos = false;
+    atan = false;
+    neg = false;
+    sqrt = false;
+    fact = false;
+    document.getElementById("sine").style.backgroundColor = "#ff0000";
+    document.getElementById("cosine").style.backgroundColor = "#ff0000";
+    document.getElementById("tangent").style.backgroundColor = "#ff0000";
+    document.getElementById("neg").style.backgroundColor = "#ff0000";
+    document.getElementById("sqrt").style.backgroundColor = "#ff0000";
+    document.getElementById("fact").style.backgroundColor = "#ff0000";
+}
+
+
+
+function executeAlso() {
+
+    try {
+        absvar3 = Number(var3);
+        if (deg == true) {
+            if (sin == true) {
+                
+                absvar3 = Math.sin(absvar3 * degrees);
+            }
+            if (cos == true) {
+                
+                absvar3 = Math.cos(absvar3 * degrees);
+            }
+            if (tan == true) {
+                
+                absvar3 = Math.tan(absvar3 * degrees);
+            }
+            if (asin == true) {
+                
+                absvar3 = Math.asin(absvar3) * degree2;
+            }
+            if (acos == true) {
+                
+                absvar3 = Math.acos(absvar3) * degree2;
+            }
+            if (atan == true) {
+                
+                absvar3 = Math.atan(absvar3) * degree2;
+            }
+        } else {
+            if (sin == true) {
+                absvar3 = Math.sin(absvar3);
+            }
+            if (cos == true) {
+                absvar3 = Math.cos(absvar3);
+            }
+            if (tan == true) {
+                absvar3 = Math.tan(absvar3);
+            }
+            if (asin == true) {
+                absvar3 = Math.asin(absvar3);
+            }
+            if (acos == true) {
+                absvar3 = Math.acos(absvar3);
+            }
+            if (atan == true) {
+                absvar3 = Math.atan(absvar3);
+            }
+        }
+
+        if (sqrt == true) {
+            absvar3 = Math.sqrt(absvar3)
+
+        }
+
+        if (fact == true) {
+            FactVar = absvar3-1
+            try {
+                absvar3 = factorialSeq[Factvar];
+            } catch (error) {
+                alert("ERROR Please retry")
+                clears()
+            }
+        }
+    } catch (error) {
+        alert("ERROR. Please retry")
+        clears()
+    }
+    update()
     sin = false;
     cos = false;
     tan = false;
@@ -472,7 +810,7 @@ function acosine() {
     if (var1Bool == true && var2Bool == false) {
         return;
     } else {
-        if (cos == false) {
+        if (acos == false) {
             
             document.getElementById("tangent").style.backgroundColor = "#ff0000";
             document.getElementById("sine").style.backgroundColor = "#ff0000";
@@ -960,6 +1298,14 @@ function bgchange() {
     document.getElementById("mainbg").style.backgroundImage = "url(\""+file+"\")";
 }
 
+
+
+
+
+
+
+
+
 function col1() {
     color = prompt("Enter hex code:");
     localStorage.setItem("color1",color)
@@ -988,6 +1334,11 @@ function col1() {
     document.getElementById("button22").style.backgroundColor = color;
     document.getElementById("button23").style.backgroundColor = color;
     document.getElementById("button24").style.backgroundColor = color;
+    document.getElementById("button25").style.backgroundColor = color;
+    document.getElementById("button26").style.backgroundColor = color;
+    document.getElementById("button27").style.backgroundColor = color;
+    document.getElementById("button28").style.backgroundColor = color;
+
 }
 function help() {
     prompt("This is the help");
@@ -1020,5 +1371,10 @@ function col2() {
     document.getElementById("button22").style.color = color;
     document.getElementById("button23").style.color = color;
     document.getElementById("button24").style.color = color;
+    document.getElementById("button25").style.color = color;
+    document.getElementById("button26").style.color = color;
+    document.getElementById("button27").style.color = color;
+    document.getElementById("button28").style.color = color;
+
     
 }
