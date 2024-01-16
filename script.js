@@ -21,6 +21,7 @@ var sqrt = false;
 var fact = false;
 var xval = 0;
 var yval = 0;
+var bgcols;
 const factorialSeq = [1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368000, 20922789888000, 355687428096000, 6402373705728000, 121645100408832000, 2432902008176640000, 51090942171709440000, 1124000727777607680000, 25852016738884976640000, 620448401733239439360000, 15511210043330985984000000, 403291461126605635584000000, 10888869450418352160768000000, 304888344611713860501504000000, 8841761993739701954543616000000, 265252859812191058636308480000000, 8222838654177922817725562880000000, 263130836933693530167218012160000000, 8683317618811886495518194401280000000, 295232799039604140847618609643520000000, 10333147966386144929666651337523200000000, 371993326789901217467999448150835200000000];
 const degrees = Math.PI/180;
 const degree2 = 180/Math.PI;
@@ -30,6 +31,14 @@ try {
     saved = localStorage.getItem("saved");
 } catch (error) {
     saved = "nope!";
+}
+
+
+try {
+    bgcols = localStorage.getItem("bgcol");
+    document.getElementById("mainbg").style.backgroundColor = bgcols;
+} catch (error) {
+    localStorage.setItem("bgcol","#ffffff");
 }
 
 try {
@@ -411,15 +420,15 @@ function execute() {
     neg = false;
     sqrt = false;
     fact = false;
-    document.getElementById("sine").style.backgroundColor = "#ff0000";
-    document.getElementById("cosine").style.backgroundColor = "#ff0000";
-    document.getElementById("tangent").style.backgroundColor = "#ff0000";
-    document.getElementById("neg").style.backgroundColor = "#ff0000";
-    document.getElementById("sqrt").style.backgroundColor = "#ff0000";
-    document.getElementById("fact").style.backgroundColor = "#ff0000";
+    document.getElementById("sine").style.backgroundColor = "#9d0707";
+    document.getElementById("cosine").style.backgroundColor = "#9d0707";
+    document.getElementById("tangent").style.backgroundColor = "#9d0707";
+    document.getElementById("neg").style.backgroundColor = "#9d0707";
+    document.getElementById("sqrt").style.backgroundColor = "#9d0707";
+    document.getElementById("fact").style.backgroundColor = "#9d0707";
 }
-
-
+//#08bf08
+//#9d0707
 function executeOne() {
 
     try {
@@ -499,12 +508,12 @@ function executeOne() {
     neg = false;
     sqrt = false;
     fact = false;
-    document.getElementById("sine").style.backgroundColor = "#ff0000";
-    document.getElementById("cosine").style.backgroundColor = "#ff0000";
-    document.getElementById("tangent").style.backgroundColor = "#ff0000";
-    document.getElementById("neg").style.backgroundColor = "#ff0000";
-    document.getElementById("sqrt").style.backgroundColor = "#ff0000";
-    document.getElementById("fact").style.backgroundColor = "#ff0000";
+    document.getElementById("sine").style.backgroundColor = "#9d0707";
+    document.getElementById("cosine").style.backgroundColor = "#9d0707";
+    document.getElementById("tangent").style.backgroundColor = "#9d0707";
+    document.getElementById("neg").style.backgroundColor = "#9d0707";
+    document.getElementById("sqrt").style.backgroundColor = "#9d0707";
+    document.getElementById("fact").style.backgroundColor = "#9d0707";
 }
 
 
@@ -587,12 +596,12 @@ function executeAlso() {
     neg = false;
     sqrt = false;
     fact = false;
-    document.getElementById("sine").style.backgroundColor = "#ff0000";
-    document.getElementById("cosine").style.backgroundColor = "#ff0000";
-    document.getElementById("tangent").style.backgroundColor = "#ff0000";
-    document.getElementById("neg").style.backgroundColor = "#ff0000";
-    document.getElementById("sqrt").style.backgroundColor = "#ff0000";
-    document.getElementById("fact").style.backgroundColor = "#ff0000";
+    document.getElementById("sine").style.backgroundColor = "#9d0707";
+    document.getElementById("cosine").style.backgroundColor = "#9d0707";
+    document.getElementById("tangent").style.backgroundColor = "#9d0707";
+    document.getElementById("neg").style.backgroundColor = "#9d0707";
+    document.getElementById("sqrt").style.backgroundColor = "#9d0707";
+    document.getElementById("fact").style.backgroundColor = "#9d0707";
 }
 //asine
 function equals() {
@@ -682,12 +691,12 @@ function equals() {
     var1Bool = false;
     var2Bool = false;
     var3 = "0";
-    document.getElementById("sine").style.backgroundColor = "#ff0000";
-    document.getElementById("cosine").style.backgroundColor = "#ff0000";
-    document.getElementById("tangent").style.backgroundColor = "#ff0000";
-    document.getElementById("neg").style.backgroundColor = "#ff0000";
-    document.getElementById("sqrt").style.backgroundColor = "#ff0000";
-    document.getElementById("fact").style.backgroundColor = "#ff0000";
+    document.getElementById("sine").style.backgroundColor = "#9d0707";
+    document.getElementById("cosine").style.backgroundColor = "#9d0707";
+    document.getElementById("tangent").style.backgroundColor = "#9d0707";
+    document.getElementById("neg").style.backgroundColor = "#9d0707";
+    document.getElementById("sqrt").style.backgroundColor = "#9d0707";
+    document.getElementById("fact").style.backgroundColor = "#9d0707";
     update()
     
 }
@@ -784,12 +793,12 @@ function atangent() {
     } else {
         if (atan == false) {
             
-            document.getElementById("atan").style.backgroundColor = "#00ff00";
-            document.getElementById("sine").style.backgroundColor = "#ff0000";
-            document.getElementById("cosine").style.backgroundColor = "#ff0000";
-            document.getElementById("tangent").style.backgroundColor = "#ff0000";
-            document.getElementById("asin").style.backgroundColor = "#ff0000";
-            document.getElementById("acos").style.backgroundColor = "#ff0000";
+            document.getElementById("atan").style.backgroundColor = "#08bf08";
+            document.getElementById("sine").style.backgroundColor = "#9d0707";
+            document.getElementById("cosine").style.backgroundColor = "#9d0707";
+            document.getElementById("tangent").style.backgroundColor = "#9d0707";
+            document.getElementById("asin").style.backgroundColor = "#9d0707";
+            document.getElementById("acos").style.backgroundColor = "#9d0707";
             tan  = false;
             cos = false;
             sin = false;
@@ -799,7 +808,7 @@ function atangent() {
         } else {
 
             atan = false;
-            document.getElementById("atan").style.backgroundColor = "#ff0000";
+            document.getElementById("atan").style.backgroundColor = "#9d0707";
         }
     }
     update();
@@ -812,12 +821,12 @@ function acosine() {
     } else {
         if (acos == false) {
             
-            document.getElementById("tangent").style.backgroundColor = "#ff0000";
-            document.getElementById("sine").style.backgroundColor = "#ff0000";
-            document.getElementById("acos").style.backgroundColor = "#00ff00";
-            document.getElementById("atan").style.backgroundColor = "#ff0000";
-            document.getElementById("asin").style.backgroundColor = "#ff0000";
-            document.getElementById("cosine").style.backgroundColor = "#ff0000";
+            document.getElementById("tangent").style.backgroundColor = "#9d0707";
+            document.getElementById("sine").style.backgroundColor = "#9d0707";
+            document.getElementById("acos").style.backgroundColor = "#08bf08";
+            document.getElementById("atan").style.backgroundColor = "#9d0707";
+            document.getElementById("asin").style.backgroundColor = "#9d0707";
+            document.getElementById("cosine").style.backgroundColor = "#9d0707";
             acos = true;
             tan = false;
             sin = false;
@@ -827,7 +836,7 @@ function acosine() {
         } else {
 
             acos = false;
-            document.getElementById("acos").style.backgroundColor = "#ff0000";
+            document.getElementById("acos").style.backgroundColor = "#9d0707";
         }
     }
     update();
@@ -841,12 +850,12 @@ function asine() {
     } else {
         if (asin == false) {
             
-            document.getElementById("tangent").style.backgroundColor = "#ff0000";
-            document.getElementById("asin").style.backgroundColor = "#00ff00";
-            document.getElementById("cosine").style.backgroundColor = "#ff0000";
-            document.getElementById("atan").style.backgroundColor = "#ff0000";
-            document.getElementById("sine").style.backgroundColor = "#ff0000";
-            document.getElementById("acos").style.backgroundColor = "#ff0000";
+            document.getElementById("tangent").style.backgroundColor = "#9d0707";
+            document.getElementById("asin").style.backgroundColor = "#08bf08";
+            document.getElementById("cosine").style.backgroundColor = "#9d0707";
+            document.getElementById("atan").style.backgroundColor = "#9d0707";
+            document.getElementById("sine").style.backgroundColor = "#9d0707";
+            document.getElementById("acos").style.backgroundColor = "#9d0707";
             sin = false;
             cos = false;
             tan = false;
@@ -856,7 +865,7 @@ function asine() {
         } else {
 
             asin = false;
-            document.getElementById("asin").style.backgroundColor = "#ff0000";
+            document.getElementById("asin").style.backgroundColor = "#9d0707";
         }
     }
     update();
@@ -869,12 +878,12 @@ function tangent() {
     } else {
         if (tan == false) {
             
-            document.getElementById("tangent").style.backgroundColor = "#00ff00";
-            document.getElementById("sine").style.backgroundColor = "#ff0000";
-            document.getElementById("cosine").style.backgroundColor = "#ff0000";
-            document.getElementById("atan").style.backgroundColor = "#ff0000";
-            document.getElementById("asin").style.backgroundColor = "#ff0000";
-            document.getElementById("acos").style.backgroundColor = "#ff0000";
+            document.getElementById("tangent").style.backgroundColor = "#08bf08";
+            document.getElementById("sine").style.backgroundColor = "#9d0707";
+            document.getElementById("cosine").style.backgroundColor = "#9d0707";
+            document.getElementById("atan").style.backgroundColor = "#9d0707";
+            document.getElementById("asin").style.backgroundColor = "#9d0707";
+            document.getElementById("acos").style.backgroundColor = "#9d0707";
             tan = true;
             cos = false;
             sin = false;
@@ -884,7 +893,7 @@ function tangent() {
         } else {
 
             tan = false;
-            document.getElementById("tangent").style.backgroundColor = "#ff0000";
+            document.getElementById("tangent").style.backgroundColor = "#9d0707";
         }
     }
     update();
@@ -897,12 +906,12 @@ function sine() {
     } else {
         if (sin == false) {
             
-            document.getElementById("tangent").style.backgroundColor = "#ff0000";
-            document.getElementById("sine").style.backgroundColor = "#00ff00";
-            document.getElementById("cosine").style.backgroundColor = "#ff0000";
-            document.getElementById("atan").style.backgroundColor = "#ff0000";
-            document.getElementById("asin").style.backgroundColor = "#ff0000";
-            document.getElementById("acos").style.backgroundColor = "#ff0000";
+            document.getElementById("tangent").style.backgroundColor = "#9d0707";
+            document.getElementById("sine").style.backgroundColor = "#08bf08";
+            document.getElementById("cosine").style.backgroundColor = "#9d0707";
+            document.getElementById("atan").style.backgroundColor = "#9d0707";
+            document.getElementById("asin").style.backgroundColor = "#9d0707";
+            document.getElementById("acos").style.backgroundColor = "#9d0707";
             sin = true;
             cos = false;
             tan = false;
@@ -912,7 +921,7 @@ function sine() {
         } else {
 
             sin = false;
-            document.getElementById("sine").style.backgroundColor = "#ff0000";
+            document.getElementById("sine").style.backgroundColor = "#9d0707";
         }
     }
     update();
@@ -925,12 +934,12 @@ function cosine() {
     } else {
         if (cos == false) {
             
-            document.getElementById("tangent").style.backgroundColor = "#ff0000";
-            document.getElementById("sine").style.backgroundColor = "#ff0000";
-            document.getElementById("cosine").style.backgroundColor = "#00ff00";
-            document.getElementById("atan").style.backgroundColor = "#ff0000";
-            document.getElementById("asin").style.backgroundColor = "#ff0000";
-            document.getElementById("acos").style.backgroundColor = "#ff0000";
+            document.getElementById("tangent").style.backgroundColor = "#9d0707";
+            document.getElementById("sine").style.backgroundColor = "#9d0707";
+            document.getElementById("cosine").style.backgroundColor = "#08bf08";
+            document.getElementById("atan").style.backgroundColor = "#9d0707";
+            document.getElementById("asin").style.backgroundColor = "#9d0707";
+            document.getElementById("acos").style.backgroundColor = "#9d0707";
             cos = true;
             tan = false;
             sin = false;
@@ -940,7 +949,7 @@ function cosine() {
         } else {
 
             cos = false;
-            document.getElementById("cosine").style.backgroundColor = "#ff0000";
+            document.getElementById("cosine").style.backgroundColor = "#9d0707";
         }
     }
     update();
@@ -954,12 +963,12 @@ function sqrtx() {
     } else {
         if (sqrt == false) {
             
-            document.getElementById("sqrt").style.backgroundColor = "#00ff00";
+            document.getElementById("sqrt").style.backgroundColor = "#08bf08";
             sqrt = true;
         } else {
 
             sqrt = false;
-            document.getElementById("sqrt").style.backgroundColor = "#ff0000";
+            document.getElementById("sqrt").style.backgroundColor = "#9d0707";
         }
     }
     update();
@@ -971,12 +980,12 @@ function factorial() {
     } else {
         if (fact == false) {
             
-            document.getElementById("fact").style.backgroundColor = "#00ff00";
+            document.getElementById("fact").style.backgroundColor = "#08bf08";
             fact = true;
         } else {
 
             fact = false;
-            document.getElementById("fact").style.backgroundColor = "#ff0000";
+            document.getElementById("fact").style.backgroundColor = "#9d0707";
         }
     }
     update();
@@ -985,8 +994,8 @@ function factorial() {
 function degb() {
     deg = true;
     update();
-    document.getElementById("degb").style.backgroundColor = "#00ff00";
-    document.getElementById("radb").style.backgroundColor = "#ff0000";
+    document.getElementById("degb").style.backgroundColor = "#08bf08";
+    document.getElementById("radb").style.backgroundColor = "#9d0707";
 }
 
 
@@ -995,8 +1004,8 @@ function degb() {
 function rad() {
     deg = false;
     update();
-    document.getElementById("radb").style.backgroundColor = "#00ff00";
-    document.getElementById("degb").style.backgroundColor = "#ff0000";
+    document.getElementById("radb").style.backgroundColor = "#08bf08";
+    document.getElementById("degb").style.backgroundColor = "#9d0707";
 }
 
 function zero() {
@@ -1051,15 +1060,15 @@ function clears() {
     neg = false;
     sqrt = false;
     fact = false;
-    document.getElementById("sine").style.backgroundColor = "#ff0000";
-    document.getElementById("cosine").style.backgroundColor = "#ff0000";
-    document.getElementById("tangent").style.backgroundColor = "#ff0000";
-    document.getElementById("neg").style.backgroundColor = "#ff0000";
-    document.getElementById("sqrt").style.backgroundColor = "#ff0000";
-    document.getElementById("fact").style.backgroundColor = "#ff0000";
-    document.getElementById("atan").style.backgroundColor = "#ff0000";
-    document.getElementById("asin").style.backgroundColor = "#ff0000";
-    document.getElementById("acos").style.backgroundColor = "#ff0000";
+    document.getElementById("sine").style.backgroundColor = "#9d0707";
+    document.getElementById("cosine").style.backgroundColor = "#9d0707";
+    document.getElementById("tangent").style.backgroundColor = "#9d0707";
+    document.getElementById("neg").style.backgroundColor = "#9d0707";
+    document.getElementById("sqrt").style.backgroundColor = "#9d0707";
+    document.getElementById("fact").style.backgroundColor = "#9d0707";
+    document.getElementById("atan").style.backgroundColor = "#9d0707";
+    document.getElementById("asin").style.backgroundColor = "#9d0707";
+    document.getElementById("acos").style.backgroundColor = "#9d0707";
     update();
 }
 
@@ -1088,7 +1097,7 @@ function negat() {
             } else {
                 var3 = "-"+var3;
             }
-            document.getElementById("neg").style.backgroundColor = "#00ff00";
+            document.getElementById("neg").style.backgroundColor = "#08bf08";
             neg = true;
         } else {
             if (var1Bool == false) {
@@ -1097,7 +1106,7 @@ function negat() {
                 var3 = var3.replace("-","");
             }
             neg = false;
-            document.getElementById("neg").style.backgroundColor = "#ff0000";
+            document.getElementById("neg").style.backgroundColor = "#9d0707";
         }
     }
     update();
@@ -1378,3 +1387,66 @@ function col2() {
 
     
 }
+
+function BGCol() {
+    bgcols = localStorage.getItem("bgcol");
+    bgcols = prompt("Enter hex code for background",bgcols);
+    document.getElementById("mainbg").style.backgroundColor = bgcols;
+    localStorage.setItem("bgcol",bgcols);
+}
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    document.addEventListener('keydown', event => {
+        var key = event.key.toLowerCase();
+        if (key == "1") {
+            one();
+        } else if (key == "2") {
+            two();
+        } else if (key == "3") {
+            three();
+        } else if (key == "4") {
+            four();
+        } else if (key == "5") {
+            five();
+        } else if (key == "6") {
+            six();
+        } else if (key == "7") {
+            seven();
+        } else if (key == "8") {
+            eight();
+        } else if (key == "9") {
+            nine();
+        } else if (key == "0") {
+            zero();
+        } else if (key == "=" || key == "enter") {
+            equals();
+        } else if (key == "-") {
+            minus();
+        } else if (key == "+") {
+            plus();
+        } else if ( key == "*") {
+            times();
+        } else if (key == "/") {
+            divide();
+        }  else if (key == ".") {
+            decimal();
+        }  else if (key == "s") {
+            decimal();
+        }  else if (key == "^") {
+            expon();
+        }  else if (key == "x") {
+            xDisp();
+        }  else if (key == "y") {
+            yDisp();
+        }  else if (key == "c") {
+            clears();
+        }  else if (key == "backspace") {
+            del();
+        }
+    });
+});
+//one(
+//del

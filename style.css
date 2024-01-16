@@ -46,7 +46,7 @@ button {
 }
 .delbutton {
     background-color: #00008B;
-    color: #000000;
+    color: #ffffff;
     padding: 10px;
     height: 40px;
     width: 60px;
@@ -57,8 +57,8 @@ button {
     margin:10px;
 }
 .degbutton {
-    background-color: #00ff00;
-    color: #000000;
+    background-color: #08bf08;
+    color: #ffffff;
     padding: 10px;
     height: 40px;
     width: 60px;
@@ -69,8 +69,8 @@ button {
     margin:10px;
 }
 .radbutton {
-    background-color: #ff0000;
-    color: #000000;
+    background-color: #9d0707;
+    color: #ffffff;
     padding: 10px;
     height: 40px;
     width: 60px;
@@ -91,8 +91,8 @@ button {
     align-items: center;
 }
 .sinbutton {
-    background-color: #ff0000;
-    color: #000000;
+    background-color: #9d0707;
+    color: #ffffff;
     padding: 10px;
     height: 40px;
     width: 60px;
@@ -103,8 +103,8 @@ button {
     margin:10px;
 }
 .tanbutton {
-    background-color: #ff0000;
-    color: #000000;
+    background-color: #9d0707;
+    color: #ffffff;
     padding: 10px;
     height: 40px;
     width: 60px;
@@ -115,8 +115,8 @@ button {
     margin:10px;
 }
 .cosbutton {
-    background-color: #ff0000;
-    color: #000000;
+    background-color: #9d0707;
+    color: #ffffff;
     padding: 10px;
     height: 40px;
     width: 60px;
@@ -127,8 +127,8 @@ button {
     margin:10px;
 }
 .negbutton {
-    background-color: #ff0000;
-    color: #000000;
+    background-color: #9d0707;
+    color: #ffffff;
     padding: 10px;
     height: 40px;
     width: 60px;
@@ -139,8 +139,8 @@ button {
     margin:10px;
 }
 .sqrtbutton {
-    background-color: #ff0000;
-    color: #000000;
+    background-color: #9d0707;
+    color: #ffffff;
     padding: 10px;
     height: 40px;
     width: 60px;
@@ -151,8 +151,8 @@ button {
     margin:10px;
 }
 .factorialbutton {
-    background-color: #ff0000;
-    color: #000000;
+    background-color: #9d0707;
+    color: #ffffff;
     padding: 10px;
     height: 40px;
     width: 60px;
